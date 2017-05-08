@@ -21,6 +21,7 @@
 		var queryString = decodeURIComponent(window.location.search);
 		queryString = queryString.substring(1);
 		var queries = queryString.split("&");
+		document.getElementById("theFile").value  = queries[0];
 		
 	
         $('#puzzle-image').attr('src', queries[0]);      
@@ -495,7 +496,7 @@
                 var firstTile = instance.tiles[0];
                 var firstCellPosition = firstTile.cellPosition;
 
-                for (var y = 0; y < instance.tilesPerColumn; y++) {
+                for (var y = 0; y < instance.tilesPerColumn; y++) { 
                     for (var x = 0; x < instance.tilesPerRow; x++) {
                         var index = y * instance.tilesPerRow + x;
                         var cellPosition = instance.tiles[index].cellPosition;
@@ -512,7 +513,7 @@
     </script>
 </head>
 <body>
-
+    <input type="text" id="theFile" value ="images/Earth.png" />
     <img width="920" height="120" src="/images/logo.png" class="logo"/>
     <canvas id="canvas" class="canvas" resize></canvas>
     <div class="charms">
