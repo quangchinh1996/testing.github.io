@@ -23,7 +23,7 @@
 		var queries = queryString.split("&");
 		document.getElementById("theFile").value  = queries[0];
 		
-	    
+	    document.getElementById("puzzle-image").src= queries[0];
         $('#puzzle-image').attr('src', queries[0]);      
 
         var imgWidth = $('.puzzle-image').css('width').replace('px', '');
@@ -513,15 +513,15 @@
     </script>
 </head>
 <body>
-    <input type="text" id="theFile" value ="images/Earth.png" />
-    <img width="920" height="120" src="images/logo.png" class="logo"/>
+    <input type="text" id="theFile" value = "" />
+    <img width="920" height="120" src="/images/logo.png" class="logo"/>
     <canvas id="canvas" class="canvas" resize></canvas>
     <div class="charms">
         <img width="50" height="50" src="images/zoomIn.png" class="zoomIn"/>
         <img width="50" height="50" src="images/zoomOut.png" class="zoomOut"/>
         <img width="50" height="50" src="images/help.png" class="help"/>
     </div>
-    <img width="256" height="256" id="puzzle-image" class="puzzle-image" style="display: none;" src= "" />
+    <img width="256" height="256" id="puzzle-image" class="puzzle-image" style="display: none;" src="" />
     <img width="128" height="128" id="empty" style="display: none;" src="images/empty.png" />
 </body>
 </html>
