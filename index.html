@@ -7,8 +7,11 @@
 <button id="myButton" class="float-left submit-button" >Create Puzzle</button>
 
 <script type="text/javascript">
+	var source = "image/Earth.png"
+	var value2 = "temp"
+	var queryString = "?source=" + source + "&value2=" + value2
     document.getElementById("myButton").onclick = function () {
-        location.href = "content/index.html";
+        window.location.href = "content/index.html" + queryString;
     };
 </script>
 
