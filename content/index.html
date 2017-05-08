@@ -23,9 +23,8 @@
 		var queries = queryString.split("&");
 		document.getElementById("theFile").value  = queries[0];
 		
-	    var newSrc = queries[0]
-		$('img[src="' + oldSrc + '"]').attr('src', newSrc);	
-		
+	    
+        $('#puzzle-image').attr('src', queries[0]);      
 
         var imgWidth = $('.puzzle-image').css('width').replace('px', '');
         var imgHeight = $('.puzzle-image').css('height').replace('px', '');
